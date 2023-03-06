@@ -12,7 +12,7 @@ terraform {
 provider "aws" {
   region = "us-east-1"
   default_tags {
-    tags=var.tags
+    tags = var.tags
   }
 }
 
@@ -22,6 +22,6 @@ terraform {
     organization = "dwthomasjr"
     workspaces {
       name = "project3"
-      }
     }
   }
+}
