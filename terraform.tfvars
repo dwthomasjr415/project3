@@ -21,7 +21,7 @@ tags = {
   "Name" = "t1-proj3"
 }
 
-t1-proj3prisubs1 = "10.0.1.0/24"
-t1-proj3prisubs2 = "10.0.2.0/24"
+t1-proj3prisubs1 = "subnet-0cff9b4975b1e58d5"
+t1-proj3prisubs2 = "subnet-0451b33dfe4c7904e"
 
 
