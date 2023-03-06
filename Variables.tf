@@ -1,9 +1,9 @@
-variable "subnet_id_1" {
+variable "t1-proj3prisubs1" {
   type    = string
-  default = "subnet-your_first_subnet_id"
+  default = "t1-proj3prisubs1"
 }
 
-variable "subnet_id_2" {
+variable "t1-proj3prisubs2" {
   type    = string
-  default = "subnet-your_second_subnet_id"
+  default = "t1-proj3prisubse2"
 }

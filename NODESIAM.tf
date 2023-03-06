@@ -37,7 +37,7 @@ resource "aws_eks_node_group" "worker-node-group" {
   cluster_name    = aws_eks_cluster.team1project3-eks.name
   node_group_name = "team1project3-workernodes"
   node_role_arn   = aws_iam_role.workernodes.arn
-  subnet_ids      = [var.subnet_id_1, var.subnet_id_2]
+  subnet_ids      = [var.t1-proj3prisubs1, var.t1-proj3prisubs2]
   instance_types  = ["t3.medium"]
 
   scaling_config {

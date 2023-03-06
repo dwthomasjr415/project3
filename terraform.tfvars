@@ -3,8 +3,8 @@
 #vpc_cidr           = "10.60.0.0/16"
 #AZ1                = "us-east-1a"
 #AZ2                = "us-east-1b"
-#subnet1_cidr_block = "10.60.101.0/24"
-#subnet2_cidr_block = "10.60.102.0/24"
+#subnet_id_2 = "10.0.2.0/24"
+#subnet_id_1 = "10.0.1.0/24"
 #subnet3_cidr_block = "10.60.201.0/24"
 #subnet4_cidr_block = "10.60.202.0/24"
 # subnet5_cidr_block = "10.60.203.0/24"
@@ -20,4 +20,8 @@
 tags = {
   "Name" = "t1-proj3"
 }
+
+t1-proj3prisubs1 = "10.0.1.0/24"
+t1-proj3prisubs2 = "10.0.2.0/24"
+
 
