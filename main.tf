@@ -35,3 +35,7 @@ resource "aws_subnet" "t1-snpr2" {
     availability_zone = var.AZ1
     cidr_block = var.subnet4_cidr_block
 }
+# This allocates the Public elastic IP for NAT Gateway in AZ2
+resource "aws_eip" "team1_Jenkins" {
+    vpc = true
+}
