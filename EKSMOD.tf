@@ -6,6 +6,9 @@ module "eks" {
   cluster_version = "1.24"
 
   cluster_endpoint_public_access = true
+  ###
+  cluster_endpoint_private_access = true
+  ###
 
   cluster_addons = {
     coredns = {
@@ -18,6 +21,10 @@ module "eks" {
       most_recent = true
     }
   }
+  ###
+  enable_irsa = true
+  ###
+
   vpc_id     = "vpc-08685aef758de67b8"
   subnet_ids = [var.t1-proj3prisubs1, var.t1-proj3prisubs2]
   # EKS Managed Node Group(s)
@@ -37,23 +44,16 @@ module "eks" {
   # aws-auth configmap
   manage_aws_auth_configmap = true
 
-  # aws_auth_roles = [
-  #   {
-  #     rolearn  = "arn:aws:iam::257248662189:role/AdminRole"
-  #     username = "role1"
-  #     groups   = ["system:masters"]
-  #   }
-  # ]
+  aws_auth_roles = [
+    {
+      rolearn  = "arn:aws:iam::257248662189:role/AdminRole"
+      username = "role1"
+      groups   = ["system:masters"]
+    }
+  ]
   aws_auth_accounts = [
     "257248662189"
   ]
-  # aws_auth_users = [
-  #   {
-  #     userarn  = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54"
-  #     username = "admin"
-  #     groups   = ["system:masters"]
-  #   }
-  # ]
 
   tags = {
     Owner = "t1-proj3"
