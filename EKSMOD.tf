@@ -1,15 +1,11 @@
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 19.0"
-
+#Cluster Defaults
   cluster_name    = "team1project3"
   cluster_version = "1.24"
-
   cluster_endpoint_public_access = true
-  ###
   cluster_endpoint_private_access = true
-  ###
-
   cluster_addons = {
     coredns = {
       most_recent = true
@@ -21,10 +17,6 @@ module "eks" {
       most_recent = true
     }
   }
-###
-  enable_irsa = true
-###
-
   vpc_id     = "vpc-08685aef758de67b8"
   subnet_ids = [var.t1-proj3prisubs1, var.t1-proj3prisubs2]
   # EKS Managed Node Group(s)
@@ -36,7 +28,6 @@ module "eks" {
       min_size     = 2
       max_size     = 2
       desired_size = 2
-
       instance_types = ["t3.medium"]
       capacity_type  = "SPOT"
     }
@@ -62,7 +53,6 @@ module "eks" {
       groups   = ["system:masters"]
     }
   ]
-
   tags = {
     Owner = "t1-proj3"
   }
