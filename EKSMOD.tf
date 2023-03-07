@@ -21,9 +21,9 @@ module "eks" {
       most_recent = true
     }
   }
-  ###
+###
   enable_irsa = true
-  ###
+###
 
   vpc_id     = "vpc-08685aef758de67b8"
   subnet_ids = [var.t1-proj3prisubs1, var.t1-proj3prisubs2]
@@ -43,6 +43,7 @@ module "eks" {
   }
   # aws-auth configmap
   manage_aws_auth_configmap = true
+  create_aws_auth_configmap = true
 
   aws_auth_roles = [
     {
@@ -53,6 +54,13 @@ module "eks" {
   ]
   aws_auth_accounts = [
     "257248662189"
+  ]
+  aws_auth_users = [
+    {
+      userarn  = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54"
+      username = "admin"
+      groups   = ["system:masters"]
+    }
   ]
 
   tags = {
