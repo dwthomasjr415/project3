@@ -5,7 +5,7 @@ module "elb_http" {
   name = "t1-proj3-elb"
 
   subnets         = [var.t1-proj3pubsubs1, var.t1-proj3pubsubs2]
-  security_groups = ["*"]
+  security_groups = ["team1proj3SG"]
   internal        = false
 
   listener = [
