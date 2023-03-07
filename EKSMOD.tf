@@ -42,7 +42,7 @@ module "eks" {
       rolearn  = "arn:aws:iam::257248662189:role/AdminRole"
       username = "admin"
       groups   = ["system:masters"]
-    },
+    }
   ]
   aws_auth_accounts = [
     "257248662189"
