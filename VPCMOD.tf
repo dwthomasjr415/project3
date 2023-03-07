@@ -28,7 +28,3 @@ module "vpc" {
     Name = "t1-proj3vpc"
   }
 }
-
-variable "tags" {
-  type = map(string)
-}

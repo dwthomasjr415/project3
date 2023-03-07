@@ -17,3 +17,7 @@ variable "t1-proj3pubsubs2" {
   type    = string
   default = "t1-proj3pubsubs2"
 }
+
+variable "tags" {
+  type = map(string)
+}
