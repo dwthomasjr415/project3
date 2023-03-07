@@ -37,8 +37,8 @@ module "eks" {
 
   aws_auth_roles = [
     {
-      rolearn  = "arn:aws:iam::257248662189:role/AdminRole"
-      username = "role1"
+      rolearn  = "arn:aws:iam::257248662189:user/dt-proj1"
+      username = "dt-proj1"
       groups   = ["system:masters"]
     }
   ]
@@ -47,7 +47,7 @@ module "eks" {
   ]
   aws_auth_users = [
     {
-      userarn  = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54/cmason4109@gmail.com"
+      userarn  = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54/*"
       username = "admin"
       groups   = ["system:masters"]
     }
