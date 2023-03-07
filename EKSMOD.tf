@@ -44,9 +44,6 @@ module "eks" {
       groups   = ["system:masters"]
     },
   ]
-  aws_auth_accounts = [
-    "257248662189"
-  ]
 
   tags = {
     Owner = "t1-proj3"
