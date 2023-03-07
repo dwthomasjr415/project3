@@ -51,7 +51,7 @@ module "eks" {
   #     username = "admin"
   #     groups   = ["system:masters"]
   #   }
-  ]
+  # ]
   tags = {
     Owner = "t1-proj3"
   }
