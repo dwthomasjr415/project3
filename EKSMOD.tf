@@ -44,6 +44,15 @@ module "eks" {
       groups   = ["system:masters"]
     },
   ]
+  aws_auth_accounts = [
+    "257248662189"
+  ]
+  aws_auth_users = [
+    {
+      userarn = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54/*"
+      groups  = ["system:masters"]
+    }
+  ]
 
   tags = {
     Owner = "t1-proj3"
