@@ -18,7 +18,7 @@ module "eks" {
       most_recent = true
     }
   }
-  vpc_id     = [var.vpc_id]
+  vpc_id     = "vpc-08685aef758de67b8"
   subnet_ids = [var.t1-proj3prisubs1, var.t1-proj3prisubs2]
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
