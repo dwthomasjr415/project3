@@ -47,7 +47,7 @@ module "eks" {
   ]
   aws_auth_users = [
     {
-      userarn  = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54/*"
+      userarn  = "arn:aws:sts::257248662189:assumed-role/AWSReservedSSO_Student_7a53284de0a60a54/cmason4109@gmail.com"
       username = "admin"
       groups   = ["system:masters"]
     }
