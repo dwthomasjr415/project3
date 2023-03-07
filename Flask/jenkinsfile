@@ -1,0 +1,15 @@
+pipeline {
+   agent any
+   
+   stages {
+       stage('Login, Build and Push') { //login to docker
+           steps {
+               script {
+                   withDockerRegistry(credentialsId: 'Docker') {
+                       docker.build('anne07/flask').push('latest')
+                   }
+               }
+           }
+       }
+   }
+}   
