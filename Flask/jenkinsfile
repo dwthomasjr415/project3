@@ -2,11 +2,11 @@ pipeline {
    agent any
    
    stages {
-       stage('Login, Build and Push') { //login to docker
+       stage('Login, Build, Push') {
            steps {
                script {
-                   withDockerRegistry(credentialsId: 'Docker') {
-                       docker.build('anne07/flask').push('latest')
+                   withDockerRegistry(credentialsId: 'DockerTeam1') {
+                       docker.build('anne07/team1-project').push('latest')
                    }
                }
            }
