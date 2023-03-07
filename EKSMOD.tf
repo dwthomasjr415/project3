@@ -25,8 +25,7 @@ module "eks" {
     instance_types = ["t3.medium"]
   }
   eks_managed_node_groups = {
-    blue = {}
-    green = {
+    t1-project3 = {
       min_size     = 2
       max_size     = 2
       desired_size = 2
