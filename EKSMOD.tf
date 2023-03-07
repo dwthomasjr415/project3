@@ -35,7 +35,19 @@ module "eks" {
     }
   }
   # aws-auth configmap
-  manage_aws_auth_configmap = false
+  manage_aws_auth_configmap = true
+
+  aws_auth_roles = [
+    {
+      rolearn  = "arn:aws:iam::623156900998:role/ADMIN_FOR_EKS"
+      username = "admin"
+      groups   = ["system:masters"]
+    },
+  ]
+  aws_auth_accounts = [
+    "257248662189"
+  ]
+
   tags = {
     Owner = "t1-proj3"
   }
