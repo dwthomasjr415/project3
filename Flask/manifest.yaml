@@ -1,7 +1,14 @@
 apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: flask
+  namespace: team1-namespace
+---
+apiVersion: v1
 kind: Namespace
 metadata:
   name: team1-namespace
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -26,6 +33,7 @@ spec:
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
+      ServiceAccount: flask
 
 ---
 apiVersion: v1
