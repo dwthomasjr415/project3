@@ -4,11 +4,14 @@ pipeline {
    stages {
        stage('Login, Build, Push') {
            steps {
-               script {
-                   withDockerRegistry(credentialsId: 'DockerTeam1') {
-                       docker.build('anne07/team1-project').push('latest')
-                   }
-               }
+             dir("${env.WORKSPACE}/Flask"){
+                sh "pwd"
+                script {
+                withDockerRegistry(credentialsId: 'DockerTeam1') {
+                docker.build('anne07/team1-project').push('latest')
+                     }
+                    }
+                }
            }
        }
    }
