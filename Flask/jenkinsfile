@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                         try {
-                            sh 'kubectl apply -f manifest.yaml'
+                            sh 'kubectl apply -f Flask/manifest.yaml'
                             sh 'kubectl rollout restart deployment flask-deployment -n team1-namespace'  //restart everytime changes are made
                         } catch (Exception e) {
                             echo 'Exception occured:' + e.toString()
