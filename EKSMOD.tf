@@ -37,7 +37,12 @@ module "eks" {
 
   aws_auth_roles = [
     {
-      rolearn  = "arn:aws:iam::257248662189:role/team1project3-cluster-20230307003005940400000002"
+      rolearn  = "arn:aws:iam::257248662189:role/AdminRole" 
+      username = "Admin"
+      groups   = ["system:masters"]
+    },
+     {
+      rolearn  = "arn:aws:iam::257248662189:role/team1project3-cluster-20230307003005940400000002" 
       username = "team1project3-cluster-20230307003005940400000002"
       groups   = ["system:masters"]
     }
