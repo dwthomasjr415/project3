@@ -49,7 +49,20 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 5000
-     
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: flask
+  namespace: team1-namespace
+subjects:
+- kind: ServiceAccount
+  name: flask
+  namespace: team1-namespace
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io     
      
      
      
