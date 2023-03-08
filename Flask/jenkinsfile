@@ -14,9 +14,6 @@ pipeline {
                 }
            }
        }
-   }  
-
-    stages {
         stage('Create Namespace') { //new namespace
             steps {
                 script {
