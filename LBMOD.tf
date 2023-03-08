@@ -15,7 +15,12 @@ module "elb_http" {
       lb_port           = 80
       lb_protocol       = "HTTP"
     },
-
+    {
+      instance_port     = 5000
+      instance_protocol = "TCP"
+      lb_port           = 80
+      lb_protocol       = "HTTP"
+    }
   ]
 
   health_check = {
