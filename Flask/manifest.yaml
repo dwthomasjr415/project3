@@ -26,6 +26,7 @@ spec:
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
+      serviceAccountName: jenkins
 ---
 apiVersion: v1
 kind: Service
@@ -40,3 +41,7 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 5000
+     
+     
+     
+     
