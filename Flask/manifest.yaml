@@ -26,7 +26,7 @@ spec:
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
-      serviceAccountName: jenkins
+
 ---
 apiVersion: v1
 kind: Service
@@ -39,7 +39,7 @@ spec:
     app: flask
   ports:
     - protocol: TCP
-      port: 8080
+      port: 80
       targetPort: 5000
      
      
