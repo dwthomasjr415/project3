@@ -1,9 +1,7 @@
 module "elb_http" {
   source  = "terraform-aws-modules/elb/aws"
   version = "~> 2.0"
-
   name = "t1-proj3-elb"
-
   subnets         = [var.t1-proj3pubsubs1, var.t1-proj3pubsubs2]
   security_groups = ["sg-0e105093b61282609"]
   internal        = false
