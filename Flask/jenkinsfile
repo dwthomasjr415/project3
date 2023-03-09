@@ -19,11 +19,11 @@ pipeline {
                 script {
                         try {
                             sh 'kubectl apply -f Flask/manifest.yaml'
+                            sh 'kubectl expose deployment flask-deployment  --type=LoadBalancer  --name=flask-service'
                             sh 'kubectl rollout restart deployment flask-deployment -n team1-namespace'  //restart everytime changes are made
                         } catch (Exception e) {
                             echo 'Exception occured:' + e.toString()
                             echo 'Handled the Exception.'
-
                     }
                 }
             }
