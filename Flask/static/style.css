@@ -3,30 +3,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
   }
   
   html {
     font-size: 62.5%;
   }
   
-  
   .header {
     padding: 2rem;
+    width: 100%;
+    height: 100%;
     background-image: url("https://www.hdwallpaper.nu/wp-content/uploads/2017/03/circle-4-1.jpg");
     background-color: #43254d;
     font-family: 'Caveat', cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     color: #abd3f8;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    text-shadow:  0.5rem 0.5rem 0.5rem rgba(239, 241, 118, 0.5),0.5rem 0.5rem 0rem rgba(10, 22, 87, 0.5);
+    text-align: left;
+  }  
+
+  .todo {  /* column left */
+    float: left;
+    width: 25%;
+    height: 75vh;
+    background-color: aquamarine;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 1.5rem;
+    text-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
   }
-  .container {
-    width: 100%;
-    height: 100vh;
+
+  .extras {     /*class corner */
+    float: right;
+    width: 15%;
+    height: 75vh;
+    padding: 1rem;
+    background-color: rgb(73, 167, 170);
+    text-align: center;
+  }
+  /*calendar properties */
+  .container {     
+    float: middle;
+    width: 60%;
+    height: 75vh;
     background-color: #353142;
     color: #eee;
     display: flex;
+    font-family: "Quicksand", sans-serif;
     justify-content: center;
     align-items: center;
   }
@@ -118,4 +141,138 @@
   
   .today {
     background-color: #21797c;
+  }
+
+
+  /* todo list */
+  .container2 {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    min-height: 100px;
+    transform: translate(-50%,-50%);
+  }
+  #newtask{
+      position: relative;
+      padding: 30px 20px;
+  }
+  #newtask input{
+      width: 75%;
+      height: 45px;
+      padding: 12px;
+      color: #111111;
+      font-weight: 500;
+      position: relative;
+      border-radius: 5px;
+      font-family: 'Poppins',sans-serif;
+      font-size: 15px;
+      border: 2px solid #d1d3d4;
+  } 
+
+  #newtask input:focus{
+      outline: none;
+      border-color: #0d75ec;
+  }
+  #newtask button{
+      position: relative;
+      float: right;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: #0d75ec;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      outline: none;
+      width: 20%;
+      height: 45px;
+      border-radius: 5px;
+      font-family: 'Poppins',sans-serif;
+  }
+  #tasks{
+      border-radius: 10px;
+      width: 100%;
+      position: relative;
+      background-color: #ffffff;
+      padding: 30px 20px;
+      margin-top: 10px;
+  } 
+
+  .task{
+      border-radius: 5px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #939697;
+      cursor: pointer;
+      background-color: #c5e1e6;
+      height: 50px;
+      margin-bottom: 8px;
+      padding: 5px 10px;
+      display: flex;
+  }
+  .task span{
+      font-family: 'Poppins',sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+  }
+  .task button{
+      background-color: #6583e5;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      height: 100%;
+      width: 40px;
+      border-radius: 5px;
+  }
+
+/*icons*/
+  .team {
+    padding: 1rem;
+    font-family: 'Rubik Iso', cursive;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #6583e5;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0.3rem 0.75rem rgba(41, 119, 184, 0.5);
+  } 
+
+  .icons {
+    position: relative;
+    background-color: #32343d;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row{
+    display: flex;
+    font-family: 'Indie Flower', cursive;
+    color: #ffffff
+  }
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 14.28%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 1;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
   }
